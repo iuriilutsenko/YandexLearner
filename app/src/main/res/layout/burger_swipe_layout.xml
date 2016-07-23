@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
         android:layout_marginStart="21dp"
-        android:src="@drawable/icn_close_active"/>
+        android:src="@drawable/icn_close_active"
+        android:layout_marginLeft="21dp"/>
     <ProgressBar
 
         style="@android:style/Widget.ProgressBar.Horizontal"
@@ -30,7 +31,8 @@
         android:src="@drawable/icn_skip_next_active"
         android:layout_gravity="end"
         android:layout_marginTop="21dp"
-        android:layout_marginEnd="21dp"/>
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"/>
 
     <TextView
         android:layout_width="match_parent"
