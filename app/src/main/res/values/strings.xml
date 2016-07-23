@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">YandexLearner</string>
+
+    <string name="welcome">Выберите режим обучения</string>
+
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
