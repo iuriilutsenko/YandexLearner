@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/exercise_menu_item"
+              android:layout_width="match_parent"
+              android:layout_height="56dp"
+              android:layout_marginTop="10dp"
+              android:background="@drawable/custom_background"
+              android:orientation="horizontal"
+              android:padding="12dp">
+
+    <TextView
+        android:id="@+id/recipe_textview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="КАРТОЧКИ"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+</LinearLayout>
