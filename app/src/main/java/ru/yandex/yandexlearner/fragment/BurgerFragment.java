@@ -48,6 +48,9 @@ public class BurgerFragment extends Fragment {
         final BurgerSwipeDeckAdapter adapter = new BurgerSwipeDeckAdapter(testData, getActivity());
         cardStack.setAdapter(adapter);
 
+        cardStack.setLeftImage(R.id.left_image);
+        cardStack.setRightImage(R.id.right_image);
+
         cardStack.setEventCallback(new SwipeDeck.SwipeEventCallback() {
             @Override
             public void cardSwipedLeft(int position) {
@@ -78,8 +81,8 @@ public class BurgerFragment extends Fragment {
     }
 
     @Override
-    public void onPause() {
-        super.onPause();
+    public void onDestroy() {
+        super.onDestroy();
         mMainActivity.setHiddenToolbar(false);
     }
 }
