@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class WordStorage {
 
+
+
     private ArrayList<String> russianWords;
     private ArrayList<String> englishWords;
 
@@ -20,5 +22,11 @@ public class WordStorage {
 
     public ArrayList<String> getEnglishWords() {
         return englishWords;
+    }
+
+    public String getRandomEnglishWord() {
+        int index = (int) (Math.random() * 100);
+
+        return englishWords.get(index);
     }
 }

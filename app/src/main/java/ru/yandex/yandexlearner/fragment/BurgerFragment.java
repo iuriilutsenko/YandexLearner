@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 import ru.yandex.yandexlearner.MainActivity;
 import ru.yandex.yandexlearner.R;
+import ru.yandex.yandexlearner.WordStorage;
 import ru.yandex.yandexlearner.adapter.BurgerSwipeDeckAdapter;
 
 /**
@@ -35,15 +36,15 @@ public class BurgerFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        WordStorage wordStorage = new WordStorage();
+
         View view = inflater.inflate(R.layout.burger_swipe_layout, container, false);
         SwipeDeck cardStack = (SwipeDeck) view.findViewById(R.id.swipe_deck);
 
         final ArrayList<String> testData = new ArrayList<>();
-        testData.add("0");
-        testData.add("1");
-        testData.add("2");
-        testData.add("3");
-        testData.add("4");
+        for (int i = 0; i < 10; i++) {
+            testData.add(wordStorage.getRandomEnglishWord());
+        }
 
         final BurgerSwipeDeckAdapter adapter = new BurgerSwipeDeckAdapter(testData, getActivity());
         cardStack.setAdapter(adapter);
