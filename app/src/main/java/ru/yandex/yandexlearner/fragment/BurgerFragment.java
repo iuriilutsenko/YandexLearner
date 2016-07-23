@@ -93,7 +93,7 @@ public class BurgerFragment extends Fragment {
 
     private void interruptWorking(int position) {
         if (position + 1 >= amountOfCards) {
-            onDestroy();
+            getFragmentManager().popBackStack();
         }
     }
 
