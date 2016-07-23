@@ -74,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+
     }
 
     @Override

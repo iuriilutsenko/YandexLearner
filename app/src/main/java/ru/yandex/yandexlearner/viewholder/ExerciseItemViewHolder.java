@@ -14,9 +14,6 @@ import ru.yandex.yandexlearner.pojo.ExerciseItem;
 
 public class ExerciseItemViewHolder extends ParentViewHolder {
 
-    private static final float INITIAL_POSITION = 0.0f;
-    private static final float ROTATED_POSITION = 180f;
-
     private TextView mRecipeTextView;
     private LinearLayout mLayout;
 

@@ -21,10 +21,12 @@ import ru.yandex.yandexlearner.viewholder.ExerciseItemViewHolder;
 public class ExerciseAdapter extends ExpandableRecyclerAdapter<ExerciseItemViewHolder, ExerciseItemInfoViewHolder> {
 
     private LayoutInflater mInflator;
+    private Context mContext;
 
     public ExerciseAdapter(Context context, @NonNull List<? extends ParentListItem> parentItemList) {
         super(parentItemList);
         mInflator = LayoutInflater.from(context);
+        mContext = context;
     }
 
     @Override
@@ -36,7 +38,7 @@ public class ExerciseAdapter extends ExpandableRecyclerAdapter<ExerciseItemViewH
     @Override
     public ExerciseItemInfoViewHolder onCreateChildViewHolder(ViewGroup childViewGroup) {
         View ingredientView = mInflator.inflate(R.layout.exercise_info_menu_item_view, childViewGroup, false);
-        return new ExerciseItemInfoViewHolder(ingredientView);
+        return new ExerciseItemInfoViewHolder(ingredientView, mContext);
     }
 
     @Override
