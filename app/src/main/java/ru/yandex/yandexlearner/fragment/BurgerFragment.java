@@ -12,6 +12,7 @@ import com.daprlabs.cardstack.SwipeDeck;
 
 import java.util.ArrayList;
 
+import ru.yandex.yandexlearner.MainActivity;
 import ru.yandex.yandexlearner.R;
 import ru.yandex.yandexlearner.adapter.BurgerSwipeDeckAdapter;
 
@@ -20,10 +21,14 @@ import ru.yandex.yandexlearner.adapter.BurgerSwipeDeckAdapter;
  */
 public class BurgerFragment extends Fragment {
 
+    private MainActivity mMainActivity;
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         Log.d("YAPP", "new Burger");
         super.onActivityCreated(savedInstanceState);
+        mMainActivity = ((MainActivity) getActivity());
+        mMainActivity.setHiddenToolbar(true);
 
     }
 
@@ -70,5 +75,11 @@ public class BurgerFragment extends Fragment {
             }
         });
         return view;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mMainActivity.setHiddenToolbar(false);
     }
 }

@@ -3,6 +3,7 @@ package ru.yandex.yandexlearner;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -91,4 +92,14 @@ public class MainActivity extends AppCompatActivity {
         return id == R.id.action_settings || super.onOptionsItemSelected(item);
     }
 
+    public void setHiddenToolbar(boolean hiddenToolbar){
+        ActionBar actionBar = this.getSupportActionBar();
+        if (actionBar != null){
+            if (hiddenToolbar) {
+                actionBar.hide();
+            } else {
+                actionBar.show();
+            }
+        }
+    }
 }
