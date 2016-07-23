@@ -25,6 +25,8 @@ public class BurgerFragment extends Fragment {
 
     private MainActivity mMainActivity;
 
+    private final int amountOfCards = 10;
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         Log.d("YAPP", "new Burger");
@@ -61,12 +63,14 @@ public class BurgerFragment extends Fragment {
             public void cardSwipedLeft(int position) {
                 Log.i("YAPP", "card was swiped left, position in adapter: " + position);
                 progressBar.setProgress(position+1);
+                interruptWorking(position);
             }
 
             @Override
             public void cardSwipedRight(int position) {
                 Log.i("YAPP", "card was swiped right, position in adapter: " + position);
                 progressBar.setProgress(position+1);
+                interruptWorking(position);
             }
 
             @Override
@@ -85,6 +89,12 @@ public class BurgerFragment extends Fragment {
             }
         });
         return view;
+    }
+
+    private void interruptWorking(int position) {
+        if (position + 1 >= amountOfCards) {
+            onDestroy();
+        }
     }
 
     @Override
