@@ -23,6 +23,9 @@
     <string name="desc_trans_choice">Выберите верный вариант перевода из 4 вариантов</string>
     <string name="desc_trans_pic">Введите перевод изображения</string>
 
+    <!--Названия задач-->
+    <string name="task_cards">Рассортируйте карточки</string>
+
     <!--Призывы к действию-->
     <string name="training">Начать тренировку</string>
     <string name="task">Начать задание</string>
