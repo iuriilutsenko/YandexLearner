@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.daprlabs.cardstack.SwipeDeck;
 
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 
 import ru.yandex.yandexlearner.MainActivity;
 import ru.yandex.yandexlearner.R;
-import ru.yandex.yandexlearner.WordStorage;
+import ru.yandex.yandexlearner.words.WordStorage;
 import ru.yandex.yandexlearner.adapter.BurgerSwipeDeckAdapter;
 
 /**
@@ -52,15 +53,20 @@ public class BurgerFragment extends Fragment {
         cardStack.setLeftImage(R.id.left_image);
         cardStack.setRightImage(R.id.right_image);
 
+        final ProgressBar progressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
+
+
         cardStack.setEventCallback(new SwipeDeck.SwipeEventCallback() {
             @Override
             public void cardSwipedLeft(int position) {
                 Log.i("YAPP", "card was swiped left, position in adapter: " + position);
+                progressBar.setProgress(position+1);
             }
 
             @Override
             public void cardSwipedRight(int position) {
                 Log.i("YAPP", "card was swiped right, position in adapter: " + position);
+                progressBar.setProgress(position+1);
             }
 
             @Override

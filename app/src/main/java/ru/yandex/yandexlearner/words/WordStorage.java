@@ -1,4 +1,4 @@
-package ru.yandex.yandexlearner;
+package ru.yandex.yandexlearner.words;
 
 import java.util.ArrayList;
 
