@@ -7,27 +7,50 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <com.daprlabs.cardstack.SwipeDeck
-        android:id="@+id/swipe_deck"
-        android:layout_width="match_parent"
-        android:layout_height="480dp"
-        android:padding="40dp"
-        swipedeck:card_spacing="10dp"
-        swipedeck:max_visible="3"
-        swipedeck:render_above="true"
-        swipedeck:rotation_degrees="15"
-        swipedeck:opacity_end="0.33"/>
-
-
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginStart="21dp"
+        android:src="@drawable/icn_close_active"/>
     <ProgressBar
 
         style="@android:style/Widget.ProgressBar.Horizontal"
 
         android:layout_centerInParent="true"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
+        android:layout_marginTop="21dp"
+        android:layout_gravity="center_horizontal"
         android:max="10"
         android:layout_height="10dp" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icn_skip_next_active"
+        android:layout_gravity="end"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="21dp"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="17dp"
+        android:textSize="14sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="66dp"
+        android:text="@string/sort_cards"/>
+
+    <com.daprlabs.cardstack.SwipeDeck
+        android:layout_marginTop="120dp"
+        android:id="@+id/swipe_deck"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        swipedeck:card_spacing="10dp"
+        swipedeck:max_visible="3"
+        swipedeck:render_above="true"
+        swipedeck:rotation_degrees="15"
+        swipedeck:opacity_end="0.33"/>
 
 </com.daprlabs.cardstack.SwipeFrameLayout>
