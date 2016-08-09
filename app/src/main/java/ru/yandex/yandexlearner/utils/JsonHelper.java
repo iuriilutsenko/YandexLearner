@@ -40,6 +40,7 @@ public class JsonHelper extends AsyncTask<String, Void, List<String>> {
      * @return Data from url.
      * @throws IOException
      */
+    // Детали реализации пускай внутри остаются :) Это о ByJavaIo.
     public static String getDataByJavaIo() throws IOException {
         InputStream inputStream = null;
         BufferedReader reader = null;
