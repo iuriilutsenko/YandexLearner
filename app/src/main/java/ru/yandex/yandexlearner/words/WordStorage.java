@@ -25,6 +25,8 @@ public class WordStorage {
     }
 
     public String getRandomEnglishWord() {
+        // Магическое число 100. Кроме того get может упасть с OutOfBounds.
+        // englishWords.size() было бы чиннее
         int index = (int) (Math.random() * 100);
 
         return englishWords.get(index);

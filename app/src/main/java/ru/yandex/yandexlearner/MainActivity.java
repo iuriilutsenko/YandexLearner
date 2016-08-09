@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
+            // Сразу взять за правильно бизнес-текст добавлять в ресурсы
             getSupportActionBar().setTitle("Режим обучения");
         }
 
